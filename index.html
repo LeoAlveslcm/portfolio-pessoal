@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Um pouco da minha tragetória no âmbito tecnológico.">
+    <title>Leo - Portifólio Pessoal</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="imagens/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="imagens/logo-eu.png" alt="Imgem de um L entre maior que, menor que" width="30px">
+
+            <div class="menu-section">
+                <div class="menu-toggle">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                    <div class="three"></div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a onclick="closeMenuToggle()" href="#section1">Sobre Mim</a></li>
+                        <li><a onclick="closeMenuToggle()" href="#section2">Conhecimentos</a></li>
+                        <li><a onclick="closeMenuToggle()" href="#section3">Cursos e Certificados</a></li>
+                        <li><a onclick="closeMenuToggle()" href="#section4">Projetos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <img src="imagens/desenvolvimento.png" alt="Imagem em desenho, de pessoas trabalhando para construir um site">
+
+            <div class="text-intro">
+                <p class="ola">Olá, eu sou</p>
+                <div class="name-block">
+                    <h1 class="name">Leonardo Alves</h1>
+                </div>
+                <p class="office">Atualmente estudante fullstack <br> HTML | CSS | JavaScript </p>
+                <div class="socials-btn">
+                    <a href="https://www.linkedin.com/in/leoalveslcm" target="_blank"><button class="linkedin-btn">Linkedin</button></a>
+                    <a href="https://github.com/LeoAlveslcm" target="_blank"><button class="github-btn">Github</button></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="section1">
+            <img src="imagens/eu2.jpg" alt="Imagem de um homem fazendo sinal de paz" height="300px">
+
+            <div class="text">
+                <h1 class="title">Sobre Mim</h1>
+                <p class="description">Recém descoberto amante de programação. Cursei 3 anos de Engenharia Química até perceber que não era o que eu de fato queria, 
+                    após isso, mudei para Sistemas de Informação, onde me encontrei. Atualmente estou buscando oportunidades na área e me qualificando como programador, realizando cursos e programas. <br> <br>
+                    Este site se trata de um projeto pessoal o qual venho aprimorando e testando os conhecimentos adquiridos com desenvolvimento web.</p>
+                    <a href="Curriculo.pdf" download="Currículo"><button>Baixar CV</button></a>
+            </div>
+        </section>
+
+        <section id="section2">
+            <div class="text">
+                <h1 class="title">Conhecimentos</h1>
+                <p class="description">Comecei os estudos na área de desenvolvimento web. Desde então venho realizando alguns cursos e bootcamps a fim de melhorar minhas habilidades técnicas.
+                    Atualmente possuo conhecimentos na parte de HTML, CSS e JavaScript.
+                </p>
+            </div>
+
+            <div class="skills">
+                <div class="skills-card">
+                    <img src="imagens/logo-html.png" alt="Logo da tecnologia HTML" width="63px">
+                    <p>HTML é o componente base da web. Ele permite a construção de websites e a inserção de novos conteúdos por meio de hipertextos.</p>
+                </div>
+                <div class="skills-card">
+                    <img src="imagens/logo-css.png" alt="Logo da tecnologia CSS" width="70px">
+                    <p>CSS é uma linguagem de estilos utilizada para definir cores, fontes, tamanhos, posicionamento e qualquer outro valor estético para os elementos da página.</p>
+                </div>
+                <div class="skills-card">
+                    <img src="imagens/logo-js.png" alt="Logo da tecnologia JavaScript" width="70px">
+                    <p>Javascript, ou simplesmente JS, é uma linguagem de programação de uso geral, aplicada principalmente para desenvolvimento web.</p>
+                </div>
+                <div class="skills-card">
+                    <img src="imagens/logo-sql.png" alt="Logo da tecnologia SQL" width="70px">
+                    <p>É a linguagem de pesquisa declarativa padrão para banco de dados relacional. Aprendi a linguegem pelo SGBD MySql.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="section3">
+            <div class="text">
+                <h1 class="title">Cursos e Certificados</h1>
+                <p class="description">Atualmente me encontro cursando uma graduação de Sistemas de Informação pela Estácio e realizando o curso Tech Academy 
+                    para formação de desenvolvedores júniors, realizado pela Start Se.</p>
+            </div>
+
+            <div class="institute">
+                <div class="institute-card">
+                    <div class="box">
+                        <div class="card front-card">
+                            <img src="imagens/logo-estacio.png" alt="Logo da Faculdade Estácio">
+                        </div>
+                        <div class="card back-card-estacio">
+                            <p> Graduação <br> Sistemas de Informação <br> 2021 - 2025 </p>
+                        </div>
+                    </div>
+                    <button>Cursando</button>
+                </div>
+                <div class="institute-card">
+                    <div class="box">
+                        <div class="card front-card">
+                            <img src="imagens/logo-startse.jpg" alt="Logo da Empresa Start Se">
+                        </div>
+                        <div class="card back-card-startse">
+                            <p> Curso <br> Tech Academy <br>[HTML, CSS, Javascript, Nodejs e SQL]<br> 05/22 - 07/22 </p>
+                        </div>
+                    </div>
+                    <button>Cursando</button>
+                </div>
+                <div class="institute-card">
+                    <div class="box">
+                        <div class="card front-card">
+                            <img src="imagens/logo-santander.jpg" alt="Logo do Banco Santander">
+                        </div>
+                        <div class="card back-card-santander">
+                            <p> Bootcamp <br> Santander Fullstack Developer <br>[HTML, CSS, Javascript, Angular, Java e Spring Framework]<br> 120 Horas </p>
+                        </div>
+                    </div>
+                    <button>Cursando</button>
+                </div>
+                <div class="institute-card">
+                    <div class="box">
+                        <div class="card front-card">
+                            <img src="imagens/logo-avanade.jpg" alt="Logo da Empresa Avanade">
+                        </div>
+                        <div class="card back-card-avanade">
+                            <p> Bootcamp <br> Decola Tech 3° Edição <br>[HTML, CSS, Javascript e React Native]<br> 62 Horas </p>
+                        </div>
+                    </div>
+                    <button>Cursando</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="section4">
+            <div class="text">
+                <h1 class="title">Projetos</h1>
+                <p class="description">No momento, a construção deste site tem sido o único projeto que venho desenvolvendo, porém tenho planos que estarei tirando do papel em breve.</p>
+            </div>
+            
+            <div class="project-slider">
+                <div class="slides">
+                    <input type="radio" name="radio.btn" id="radio1">
+                    <input type="radio" name="radio.btn" id="radio2">
+                    <input type="radio" name="radio.btn" id="radio3">
+                    <input type="radio" name="radio.btn" id="radio4">
+
+                    <div class="project first">
+                        <img src="imagens/projeto.png" alt="Imagem generica de um Projeto informando: em breve">
+                    </div>
+                    <div class="project">
+                        <img src="imagens/projeto.png" alt="Imagem generica de um Projeto informando: em breve">
+                    </div>
+                    <div class="project">
+                        <img src="imagens/projeto.png" alt="Imagem generica de um Projeto informando: em breve">
+                    </div>
+                    <div class="project">
+                        <img src="imagens/projeto.png" alt="Imagem generica de um Projeto informando: em breve">
+                    </div>
+
+                    <div class="nav-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                    </div>
+                </div>
+
+                <div class="nav-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+            <p>Entre em contato: <br> leoalves97@hotmail.com <br> © 2022 Leonardo Alves</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
