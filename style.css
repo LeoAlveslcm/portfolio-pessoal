@@ -138,24 +138,31 @@ header nav ul li:hover {
 
 /* Primeira Seção */
 
-#section1, #section4 {
+#section1 {
     border-top: 0.4px solid #86D1E3;
+    background-color: #083d4b;
+    padding: 80px;
+}
+
+#section1 .container {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 100px;
 }
 
-#section1 {
-    background-color: #083d4b;
-    padding: 80px;
-}
-
 .text {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     gap: 20px;
     font-size: 1.6rem;
+}
+
+#section1 .container .text {
+    align-items: flex-start;
+    text-align: left;
 }
 
 .title {
@@ -195,21 +202,17 @@ button:hover {
 
 /* Segunda Seção */
 
-#section2, #section3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
 #section2 {
     border-top: 0.4px solid #86D1E3;
     padding: 80px;
 }
 
-#section2 .text {
+#section2 .container {
+    max-width: 98rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    text-align: center;
+    justify-content: space-evenly;
 }
 
 .skills {
@@ -256,9 +259,12 @@ button:hover {
     padding: 80px;
 }
 
-#section3 .text {
+#section3 .container {
+    max-width: 98rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    text-align: center;
+    justify-content: space-evenly;
 }
 
 .institute {
@@ -309,11 +315,17 @@ button:hover {
     transform: rotateY(-180deg);
 }
 
-.box:hover > .back-card-estacio, .box:hover > .back-card-startse, .box:hover > .back-card-santander, .box:hover > .back-card-avanade {
+.box:hover > .back-card-estacio, 
+.box:hover > .back-card-startse, 
+.box:hover > .back-card-santander, 
+.box:hover > .back-card-avanade {
     transform: rotateY(0deg);
 }
 
-.back-card-estacio, .back-card-startse, .back-card-santander, .back-card-avanade {
+.back-card-estacio, 
+.back-card-startse, 
+.back-card-santander, 
+.back-card-avanade {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -356,10 +368,18 @@ button:hover {
 /* Quarta Seção */
 
 #section4 {
+    border-top: .4px solid #86D1E3;
     padding: 80px;
 }
 
+#section4 .container {
+    max-width: 98rem;
+    display: flex;
+    flex-direction: column;
+}
+
 .project-slider {
+    margin-top: 8rem;
     width: 800px;
     height: 350px;
     overflow: hidden;
@@ -494,17 +514,6 @@ footer > p {
 
 /* Media Quere */
 
-@media screen and (max-width: 1650px) {
-    #section4 {
-        flex-direction: column;
-    }
-
-    #section4 .text {
-        align-items: center;
-        text-align: center;
-    }
-}
-
 @media screen and (max-width: 1080px) {
     .intro {
         flex-direction: column;
@@ -512,17 +521,13 @@ footer > p {
 }
 
 @media screen and (max-width: 1000px) {
-    #section1 {
+    #section1 .container {
         flex-direction: column;
     }
 
-    #section1 .text {
+    #section1 .container .text {
         align-items: center;
         text-align: center;
-    }
-
-    .intro {
-        background-image: none;
     }
 }
 
