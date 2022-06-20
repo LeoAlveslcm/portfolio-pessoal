@@ -27,8 +27,10 @@ menuToggle.addEventListener("click", () => {
 
 }) 
 
-function closeMenuToggle () {
+const menuNav = menuSection.querySelector(".menu-nav")
+
+menuNav.addEventListener("click", () => {
 
     menuSection.classList.toggle("on", show)
-    show = !show; 
-}
+    show = !show;
+})
