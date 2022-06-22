@@ -34,3 +34,16 @@ menuNav.addEventListener("click", () => {
     menuSection.classList.toggle("on", show)
     show = !show;
 })
+
+// Botão mostrar todos os projetos //
+
+const moreBtn = document.querySelector("#more-btn");
+const allProjects = document.querySelector(".all-projects");
+
+moreBtn.addEventListener("click", function() {
+    if (allProjects.style.display === "flex") {
+        allProjects.style.display = "none";
+    } else {
+        allProjects.style.display = "flex";
+    }
+})
