@@ -60,7 +60,15 @@ header nav ul li:hover {
 /* Conteudo */
 
 .intro {
-    min-height: 95vh;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info {
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
@@ -135,6 +143,125 @@ header nav ul li:hover {
     background-color: black;
     color: #fff;
 }
+
+/* Game */
+
+.game {
+    border: 1px solid #083D4B; 
+    max-width: 98rem;
+    width: 100%;
+    height: 40rem;
+    border-bottom: 30px solid #001014;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background: linear-gradient(#41396C 50%, #C04A4A 100%);
+}
+
+#keys {
+    position: absolute;
+    width: 30rem;
+    right: -30rem;
+    bottom: 50px;
+    z-index: -1;
+    animation: keys-pass 8s 1 linear;
+}
+
+#cloud1 {
+    position: absolute;
+    width: 40rem;
+    bottom: 20rem;
+    animation: cloud1-pass 15s infinite linear;
+}
+
+#cloud2 {
+    position: absolute;
+    right: -45rem;
+    width: 45rem;
+    bottom: 22rem;
+    animation: cloud1-pass 15s 8s infinite linear;
+}
+
+#vilage1 {
+    position: absolute;
+    width: 100rem;
+    bottom: -2px;
+    z-index: -1;
+    animation: vilage1-pass 40s infinite linear;
+}
+
+#vilage2 {
+    position: absolute;
+    right: -1000px;
+    width: 100rem;
+    bottom: -2px;
+    z-index: -1;
+    animation: vilage1-pass 40s 21s infinite linear;
+}
+
+#barrel {
+    position: absolute;
+    right: -50px;
+    bottom: -2px;
+    width: 50px;
+    animation: barrel-rolling 3s 10s infinite linear;
+}
+
+#ave {
+    position: absolute;
+    right: -60px;
+    width: 6rem;
+    bottom: 40px;
+    animation: ave-fly 3s 14.5s infinite linear;
+}
+
+#ninja-run {
+    position: absolute;
+    width: 7rem;
+    bottom: -2px;
+}
+
+.ninja-jump {
+    animation: jump 500ms ease-out;
+}
+
+@keyframes barrel-rolling {
+    from {right: -50px;}
+    to {right: 100%;}
+}
+
+@keyframes ave-fly {
+    from {right: -60px;}
+    to {right: 100%;}
+}
+
+@keyframes vilage1-pass {
+    from {right: -1000px;}
+    to {right: 100%;}
+}
+
+@keyframes cloud1-pass {
+    from {right: -400px;}
+    to {right: 100%;}
+}
+
+@keyframes keys-pass {
+    from {right: 20%;}
+    to {right: 100%;}
+}
+
+@keyframes jump {
+    0% {bottom: 0;}
+    40% {bottom: 100px;}
+    50% {bottom: 100px;}
+    60% {bottom: 100px;}
+    70% {bottom: 100px;}
+    100% {bottom: 0;}
+}
+
 
 /* Primeira Seção */
 
