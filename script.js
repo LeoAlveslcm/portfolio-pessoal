@@ -53,6 +53,49 @@ moreBtn.addEventListener("click", function() {
 const ninjaRun = document.querySelector("#ninja-run");
 const barrel = document.querySelector("#barrel");
 const ave = document.querySelector("#ave");
+const playButton = document.querySelector("#btn-jogar")
+const playButton2 = document.querySelector("#btn-jogar-end")
+const vilage1 = document.querySelector("#vilage1")
+const vilage2 = document.querySelector("#vilage2")
+const cloud1 = document.querySelector("#cloud1")
+const cloud2 = document.querySelector("#cloud2")
+const keys = document.querySelector("#keys")
+const start = document.querySelector("#start")
+const gameOver = document.querySelector("#game-over")
+const startImage = start.querySelector("#start-img")
+
+
+
+
+function reset() {
+    barrel.style.left = "";
+    ave.style.left = "";
+    vilage1.style.left = "";
+    vilage2.style.left = "";
+    cloud1.style.left = "";
+    cloud2.style.left = "";
+    ninjaRun.style.bottom = "";
+
+};
+
+playButton.addEventListener("click", function() {
+
+    reset();
+    loopGame();
+
+    barrel.style.animation = "barrel-rolling 3s 10s infinite linear";
+    ave.style.animation = "ave-fly 3s 14.5s infinite linear";
+    vilage1.style.animation = "vilage1-pass 40s infinite linear";
+    vilage2.style.animation = "vilage1-pass 40s 21s infinite linear";
+    cloud1.style.animation = "cloud1-pass 15s infinite linear";
+    cloud2.style.animation = "cloud1-pass 15s 8s infinite linear";
+    keys.style.animation = "keys-pass 8s 1 linear";
+
+    start.style.display = "none";
+
+    ninjaRun.src = "jogo/ninja-run.gif";
+
+});
 
 
 
@@ -61,7 +104,6 @@ document.addEventListener("keydown", function(pulo) {
     if (pulo.keyCode == 87) {
         ninjaRun.classList.add("ninja-jump");
         ninjaRun.src = "jogo/ninja-jump.png";
-        ninjaRun.style.width = "60px";
 
         setTimeout(() => {
             ninjaRun.classList.remove("ninja-jump")
@@ -86,9 +128,15 @@ document.addEventListener("keydown", function(dash) {
 
 });
 
-const loopGame = setInterval(() => {
+
+
+function loopGame() { setInterval(() => {
     const barrelPosition = barrel.offsetLeft;
     const avePosition = ave.offsetLeft;
+    const vilage1Position = vilage1.offsetLeft;
+    const vilage2Position = vilage2.offsetLeft;
+    const cloud1Position = cloud1.offsetLeft;
+    const cloud2Position = cloud2.offsetLeft;
     const ninjaRunPosition = +window.getComputedStyle(ninjaRun).bottom.replace("px", "");
 
     if (barrelPosition <= 50 && barrelPosition > 0 && ninjaRunPosition < 50) {
@@ -98,34 +146,60 @@ const loopGame = setInterval(() => {
     ave.style.animation = "none";
     ave.style.left = `${avePosition}px`;
 
-    ninjaRun.style.animation = "none";
+    vilage1.style.animation = "none";
+    vilage1.style.left = `${vilage1Position}px`;
+
+    vilage2.style.animation = "none";
+    vilage2.style.left = `${vilage2Position}px`;
+
+    cloud1.style.animation = "none";
+    cloud1.style.left = `${cloud1Position}px`;
+
+    cloud2.style.animation = "none";
+    cloud2.style.left = `${cloud2Position}px`;
+
     ninjaRun.style.bottom = `${ninjaRunPosition}px`;
 
     ninjaRun.src = "jogo/ninja-dead.png";
     ninjaRun.style.width = "70px";
+
+    start.style.display = "flex";
+    startImage.src = "jogo/game-over.png";
 
     clearInterval(loopGame)
-    }
+    } if (avePosition <= 50 && ninjaRun.style.width === "70px" ) {
+        ave.style.animation = "none";
+        ave.style.left = `${avePosition}px`;
+    
+        barrel.style.animation = "none";
+        barrel.style.left = `${barrelPosition}px`;
+    
+        vilage1.style.animation = "none";
+        vilage1.style.left = `${vilage1Position}px`;
+    
+        vilage2.style.animation = "none";
+        vilage2.style.left = `${vilage2Position}px`;
+    
+        cloud1.style.animation = "none";
+        cloud1.style.left = `${cloud1Position}px`;
+    
+        cloud2.style.animation = "none";
+        cloud2.style.left = `${cloud2Position}px`;
+    
+        ninjaRun.style.bottom = `${ninjaRunPosition}px`;
+    
+        ninjaRun.src = "jogo/ninja-dead.png";
+        ninjaRun.style.width = "70px";
+    
+        start.style.display = "flex";
+        startImage.src = "jogo/game-over.png";
+    
+        clearInterval(loopGame)
+        }
 }, 10);
+};
 
-const loopGame2 = setInterval(() => {
-    const avePosition = ave.offsetLeft;
-    const barrelPosition = barrel.offsetLeft;
-    const ninjaRunPosition = +window.getComputedStyle(ninjaRun).bottom.replace("px", "");
 
-    if (avePosition <= 50 && ninjaRun.style.width === "70px") {
-    ave.style.animation = "none";
-    ave.style.left = `${avePosition}px`;
 
-    barrel.style.animation = "none";
-    barrel.style.left = `${barrelPosition}px`;
 
-    ninjaRun.style.animation = "none";
-    ninjaRun.style.bottom = `${ninjaRunPosition}px`;
 
-    ninjaRun.src = "jogo/ninja-dead.png";
-    ninjaRun.style.width = "70px";
-
-    clearInterval(loopGame2)
-    }
-}, 10);
