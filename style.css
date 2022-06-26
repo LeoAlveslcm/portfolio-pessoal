@@ -66,6 +66,7 @@ header nav ul li:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 10rem;
 }
 
 .info {
@@ -74,6 +75,31 @@ header nav ul li:hover {
     flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
+}
+
+.game-play {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.game-play h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    width: 30rem;
+}
+
+.game-play button {
+    width: 10rem;
+    height: 5rem;
+}
+
+#img-btn-play {
+    position: relative;
+    bottom: 4px;
+    right: 10px;
 }
 
 .text-intro {
@@ -159,7 +185,7 @@ header nav ul li:hover {
     overflow: hidden;
     z-index: 1;
     background: linear-gradient(#41396C 50%, #C04A4A 100%);
-    display: flex;
+    display: none;
     align-items: center;
 }
 

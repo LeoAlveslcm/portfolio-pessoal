@@ -46,7 +46,7 @@ moreBtn.addEventListener("click", function() {
     } else {
         allProjects.style.display = "flex";
     }
-})
+});
 
 // Game //
 
@@ -54,7 +54,6 @@ const ninjaRun = document.querySelector("#ninja-run");
 const barrel = document.querySelector("#barrel");
 const ave = document.querySelector("#ave");
 const playButton = document.querySelector("#btn-jogar")
-const playButton2 = document.querySelector("#btn-jogar-end")
 const vilage1 = document.querySelector("#vilage1")
 const vilage2 = document.querySelector("#vilage2")
 const cloud1 = document.querySelector("#cloud1")
@@ -63,7 +62,26 @@ const keys = document.querySelector("#keys")
 const start = document.querySelector("#start")
 const gameOver = document.querySelector("#game-over")
 const startImage = start.querySelector("#start-img")
+const startButton = document.querySelector("#btn-start")
+const game = document.querySelector(".game")
 
+
+
+startButton.addEventListener("click", function() {
+    if (game.style.display === "flex") {
+        game.style.display = "none";
+        reset();
+        loopGame();
+        startImage.src = "jogo/start-game.png";
+        ninjaRun.src = "jogo/ninja-run.gif";
+    } else {
+        game.style.display = "flex";
+        reset();
+        loopGame();
+        startImage.src = "jogo/start-game.png";
+        ninjaRun.src = "jogo/ninja-run.gif";
+    }
+});
 
 
 
@@ -74,6 +92,7 @@ function reset() {
     vilage2.style.left = "";
     cloud1.style.left = "";
     cloud2.style.left = "";
+    keys.style.left = "";
     ninjaRun.style.bottom = "";
 
 };
@@ -137,6 +156,7 @@ function loopGame() { setInterval(() => {
     const vilage2Position = vilage2.offsetLeft;
     const cloud1Position = cloud1.offsetLeft;
     const cloud2Position = cloud2.offsetLeft;
+    const keysPosition = keys.offsetLeft;
     const ninjaRunPosition = +window.getComputedStyle(ninjaRun).bottom.replace("px", "");
 
     if (barrelPosition <= 50 && barrelPosition > 0 && ninjaRunPosition < 50) {
@@ -157,6 +177,9 @@ function loopGame() { setInterval(() => {
 
     cloud2.style.animation = "none";
     cloud2.style.left = `${cloud2Position}px`;
+
+    keys.style.animation = "none";
+    keys.style.left = `${keysPosition}px`;
 
     ninjaRun.style.bottom = `${ninjaRunPosition}px`;
 
@@ -185,6 +208,9 @@ function loopGame() { setInterval(() => {
     
         cloud2.style.animation = "none";
         cloud2.style.left = `${cloud2Position}px`;
+
+        keys.style.animation = "none";
+        keys.style.left = `${keysPosition}px`;
     
         ninjaRun.style.bottom = `${ninjaRunPosition}px`;
     
