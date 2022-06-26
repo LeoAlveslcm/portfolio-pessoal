@@ -66,11 +66,12 @@ header nav ul li:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10rem;
+    gap: 2rem;
 }
 
 .info {
     width: 100%;
+    margin-top: 2rem;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -82,18 +83,25 @@ header nav ul li:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .game-play h1 {
     text-align: center;
     font-size: 1.5rem;
-    width: 30rem;
+    width: 31rem;
 }
 
 .game-play button {
     width: 10rem;
     height: 5rem;
+}
+
+.game-play p {
+    text-align: center;
+    font-size: 1.5rem;
+    width: 31rem;
+    display: none;
 }
 
 #img-btn-play {
@@ -189,24 +197,18 @@ header nav ul li:hover {
     align-items: center;
 }
 
-#start, #game-over {
+#start {
     margin-left: 25rem;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-#start button, #game-over button {
+#start button {
     position: relative;
     border-radius: 10px;
     height: 50px;
     width: 120px;
-}
-
-#game-over {
-    position: absolute;
-    left: 25px;
-    display: none;
 }
 
 .img-btn-jogar {
@@ -225,10 +227,6 @@ header nav ul li:hover {
     z-index: -1;
 }
 
-/* .keys-anima {
-    animation: keys-pass 8s 1 linear;
-} */
-
 #cloud1 {
     position: absolute;
     right: -45rem;
@@ -236,10 +234,6 @@ header nav ul li:hover {
     bottom: 20rem;
     z-index: -1;
 }
-
-/* .cloud1-anima {
-    animation: cloud1-pass 15s infinite linear;
-} */
 
 #cloud2 {
     position: absolute;
@@ -249,10 +243,6 @@ header nav ul li:hover {
     z-index: -1;
 }
 
-/* .cloud2-anima {
-    animation: cloud1-pass 15s 8s infinite linear;
-} */
-
 #vilage1 {
     position: absolute;
     right: -1000px;
@@ -260,10 +250,6 @@ header nav ul li:hover {
     bottom: -2px;
     z-index: -1;
 }
-
-/* .vilage1-anima {
-    animation: vilage1-pass 40s infinite linear;
-} */
 
 #vilage2 {
     position: absolute;
@@ -273,10 +259,6 @@ header nav ul li:hover {
     z-index: -1;
 }
 
-/* .vilage2-anima {
-    animation: vilage1-pass 40s 21s infinite linear;
-} */
-
 #barrel {
     position: absolute;
     right: -50px;
@@ -284,20 +266,12 @@ header nav ul li:hover {
     width: 50px;
 }
 
-/* .barrel-anima {
-    animation: barrel-rolling 3s 10s infinite linear;
-} */
-
 #ave {
     position: absolute;
     right: -60px;
     width: 6rem;
     bottom: 40px;
 }
-
-/* .ave-anima {
-    animation: ave-fly 3s 14.5s infinite linear;
-} */
 
 #ninja-run {
     position: absolute;
@@ -796,9 +770,37 @@ footer > p {
 
 /* Media Quere */
 
+@media screen and (max-height: 800px) {
+    .game-play {
+        gap: none;
+    }
+
+    .game-play img {
+        width: 8rem;
+    }
+
+    #btn-start {
+        width: 7rem;
+        height: 28px;
+    }
+
+    .text-intro {
+        gap: 10px;
+    }
+}
+
 @media screen and (max-width: 1080px) {
-    .intro {
-        flex-direction: column;
+    .info {
+        flex-direction: column-reverse;
+        gap: 6rem;
+    }
+
+    #btn-start, #img-btn-play {
+        display: none;
+    }
+
+    .game-play p {
+        display: flex;
     }
 }
 
@@ -955,10 +957,6 @@ footer > p {
 
     .description {
         width: 130%;
-    }
-
-    .intro img {
-        width: 400px;
     }
 
     .skills-card {

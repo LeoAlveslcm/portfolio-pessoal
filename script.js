@@ -50,52 +50,43 @@ moreBtn.addEventListener("click", function() {
 
 // Game //
 
+const game = document.querySelector(".game");
+const start = document.querySelector("#start");
+const startImage = start.querySelector("#start-img");
+const startButton = document.querySelector("#btn-start");
+const playButton = document.querySelector("#btn-jogar");
+
 const ninjaRun = document.querySelector("#ninja-run");
 const barrel = document.querySelector("#barrel");
 const ave = document.querySelector("#ave");
-const playButton = document.querySelector("#btn-jogar")
-const vilage1 = document.querySelector("#vilage1")
-const vilage2 = document.querySelector("#vilage2")
-const cloud1 = document.querySelector("#cloud1")
-const cloud2 = document.querySelector("#cloud2")
-const keys = document.querySelector("#keys")
-const start = document.querySelector("#start")
-const gameOver = document.querySelector("#game-over")
-const startImage = start.querySelector("#start-img")
-const startButton = document.querySelector("#btn-start")
-const game = document.querySelector(".game")
+const vilage1 = document.querySelector("#vilage1");
+const vilage2 = document.querySelector("#vilage2");
+const cloud1 = document.querySelector("#cloud1");
+const cloud2 = document.querySelector("#cloud2");
+const keys = document.querySelector("#keys");
 
 
 
 startButton.addEventListener("click", function() {
     if (game.style.display === "flex") {
         game.style.display = "none";
+
         reset();
         loopGame();
+
         startImage.src = "jogo/start-game.png";
         ninjaRun.src = "jogo/ninja-run.gif";
+
     } else {
         game.style.display = "flex";
+
         reset();
         loopGame();
+
         startImage.src = "jogo/start-game.png";
         ninjaRun.src = "jogo/ninja-run.gif";
     }
 });
-
-
-
-function reset() {
-    barrel.style.left = "";
-    ave.style.left = "";
-    vilage1.style.left = "";
-    vilage2.style.left = "";
-    cloud1.style.left = "";
-    cloud2.style.left = "";
-    keys.style.left = "";
-    ninjaRun.style.bottom = "";
-
-};
 
 playButton.addEventListener("click", function() {
 
@@ -115,8 +106,6 @@ playButton.addEventListener("click", function() {
     ninjaRun.src = "jogo/ninja-run.gif";
 
 });
-
-
 
 document.addEventListener("keydown", function(pulo) {
 
@@ -147,9 +136,37 @@ document.addEventListener("keydown", function(dash) {
 
 });
 
+function reset() {
+    barrel.style.left = "";
+    ave.style.left = "";
+    vilage1.style.left = "";
+    vilage2.style.left = "";
+    cloud1.style.left = "";
+    cloud2.style.left = "";
+    keys.style.left = "";
+    ninjaRun.style.bottom = "";
 
+};
 
 function loopGame() { setInterval(() => {
+    const barrelPosition = barrel.offsetLeft;
+    const avePosition = ave.offsetLeft;
+    const ninjaRunPosition = +window.getComputedStyle(ninjaRun).bottom.replace("px", "");
+
+    if (barrelPosition <= 50 && barrelPosition > 0 && ninjaRunPosition < 50) {
+
+        stopAnimation();
+        clearInterval(loopGame)
+
+    } if (avePosition <= 50 && ninjaRun.style.width === "70px" ) {
+        
+        stopAnimation();
+        clearInterval(loopGame)
+        }
+}, 10);
+};
+
+function stopAnimation() {
     const barrelPosition = barrel.offsetLeft;
     const avePosition = ave.offsetLeft;
     const vilage1Position = vilage1.offsetLeft;
@@ -159,38 +176,6 @@ function loopGame() { setInterval(() => {
     const keysPosition = keys.offsetLeft;
     const ninjaRunPosition = +window.getComputedStyle(ninjaRun).bottom.replace("px", "");
 
-    if (barrelPosition <= 50 && barrelPosition > 0 && ninjaRunPosition < 50) {
-    barrel.style.animation = "none";
-    barrel.style.left = `${barrelPosition}px`;
-
-    ave.style.animation = "none";
-    ave.style.left = `${avePosition}px`;
-
-    vilage1.style.animation = "none";
-    vilage1.style.left = `${vilage1Position}px`;
-
-    vilage2.style.animation = "none";
-    vilage2.style.left = `${vilage2Position}px`;
-
-    cloud1.style.animation = "none";
-    cloud1.style.left = `${cloud1Position}px`;
-
-    cloud2.style.animation = "none";
-    cloud2.style.left = `${cloud2Position}px`;
-
-    keys.style.animation = "none";
-    keys.style.left = `${keysPosition}px`;
-
-    ninjaRun.style.bottom = `${ninjaRunPosition}px`;
-
-    ninjaRun.src = "jogo/ninja-dead.png";
-    ninjaRun.style.width = "70px";
-
-    start.style.display = "flex";
-    startImage.src = "jogo/game-over.png";
-
-    clearInterval(loopGame)
-    } if (avePosition <= 50 && ninjaRun.style.width === "70px" ) {
         ave.style.animation = "none";
         ave.style.left = `${avePosition}px`;
     
@@ -219,13 +204,7 @@ function loopGame() { setInterval(() => {
     
         start.style.display = "flex";
         startImage.src = "jogo/game-over.png";
-    
-        clearInterval(loopGame)
-        }
-}, 10);
 };
-
-
 
 
 
