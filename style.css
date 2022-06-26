@@ -198,7 +198,8 @@ header nav ul li:hover {
 }
 
 #start {
-    margin-left: 25rem;
+    margin-left: 27rem;
+    min-width: 45rem;
     display: flex;
     align-items: center;
     flex-direction: column;
