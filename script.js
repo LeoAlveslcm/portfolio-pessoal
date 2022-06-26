@@ -55,6 +55,8 @@ const start = document.querySelector("#start");
 const startImage = start.querySelector("#start-img");
 const startButton = document.querySelector("#btn-start");
 const playButton = document.querySelector("#btn-jogar");
+const textIntro = document.querySelector(".text-intro");
+const titleGame = document.querySelector("#title-game");
 
 const ninjaRun = document.querySelector("#ninja-run");
 const barrel = document.querySelector("#barrel");
@@ -70,22 +72,25 @@ const keys = document.querySelector("#keys");
 startButton.addEventListener("click", function() {
     if (game.style.display === "flex") {
         game.style.display = "none";
+        textIntro.style.display = "flex"
+        titleGame.style.display = "flex"
 
         reset();
         loopGame();
-
         startImage.src = "jogo/start-game.png";
         ninjaRun.src = "jogo/ninja-run.gif";
 
     } else {
         game.style.display = "flex";
+        textIntro.style.display = "none";
+        titleGame.style.display = "none";
 
         reset();
         loopGame();
-
         startImage.src = "jogo/start-game.png";
         ninjaRun.src = "jogo/ninja-run.gif";
-    }
+
+    } 
 });
 
 playButton.addEventListener("click", function() {
