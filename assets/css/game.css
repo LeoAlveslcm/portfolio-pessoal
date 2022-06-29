@@ -1,0 +1,140 @@
+/* Game */
+
+.game {
+    border: 1px solid #083D4B; 
+    max-width: 98rem;
+    width: 100%;
+    height: 40rem;
+    border-bottom: 30px solid #001014;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background: linear-gradient(#41396C 50%, #C04A4A 100%);
+    display: none;
+    align-items: center;
+}
+
+#start {
+    margin-left: 27rem;
+    min-width: 45rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#start button {
+    position: relative;
+    border-radius: 10px;
+    height: 50px;
+    width: 120px;
+}
+
+.img-btn-jogar {
+    position: absolute;
+    left: -7px;
+    top: -2px;
+    width: 130px;
+    height: 50px;
+}
+
+#keys {
+    position: absolute;
+    width: 30rem;
+    right: -30rem;
+    bottom: 50px;
+    z-index: -1;
+}
+
+#cloud1 {
+    position: absolute;
+    right: -45rem;
+    width: 40rem;
+    bottom: 20rem;
+    z-index: -1;
+}
+
+#cloud2 {
+    position: absolute;
+    right: -45rem;
+    width: 45rem;
+    bottom: 22rem;
+    z-index: -1;
+}
+
+#vilage1 {
+    position: absolute;
+    right: -1000px;
+    width: 100rem;
+    bottom: -2px;
+    z-index: -1;
+}
+
+#vilage2 {
+    position: absolute;
+    right: -1000px;
+    width: 100rem;
+    bottom: -2px;
+    z-index: -1;
+}
+
+#barrel {
+    position: absolute;
+    right: -50px;
+    bottom: -2px;
+    width: 50px;
+}
+
+#ave {
+    position: absolute;
+    right: -60px;
+    width: 6rem;
+    bottom: 40px;
+}
+
+#ninja-run {
+    position: absolute;
+    align-self: initial;
+    width: 7rem;
+    bottom: -2px;
+}
+
+.ninja-jump {
+    animation: jump 500ms ease-out;
+}
+
+@keyframes barrel-rolling {
+    from {right: -50px;}
+    to {right: 100%;}
+}
+
+@keyframes ave-fly {
+    from {right: -60px;}
+    to {right: 100%;}
+}
+
+@keyframes vilage1-pass {
+    from {right: -1000px;}
+    to {right: 100%;}
+}
+
+@keyframes cloud1-pass {
+    from {right: -400px;}
+    to {right: 100%;}
+}
+
+@keyframes keys-pass {
+    from {right: 20%;}
+    to {right: 100%;}
+}
+
+@keyframes jump {
+    0% {bottom: 0;}
+    40% {bottom: 100px;}
+    50% {bottom: 100px;}
+    60% {bottom: 100px;}
+    70% {bottom: 100px;}
+    100% {bottom: 0;}
+}
