@@ -78,38 +78,6 @@ header nav ul li:hover {
     justify-content: center;
 }
 
-.game-play {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.game-play h1 {
-    text-align: center;
-    font-size: 1.5rem;
-    width: 31rem;
-}
-
-.game-play button {
-    width: 10rem;
-    height: 5rem;
-}
-
-.game-play p {
-    text-align: center;
-    font-size: 1.5rem;
-    width: 31rem;
-    display: none;
-}
-
-#img-btn-play {
-    position: relative;
-    bottom: 4px;
-    right: 10px;
-}
-
 .text-intro {
     display: flex;
     flex-direction: column;
@@ -597,6 +565,55 @@ button:hover {
     font-size: 1.4rem;
     font-weight: 700;
     box-shadow: 2px 2px 5px black;
+}
+
+/* Quinta Seção */
+
+#section5 {
+    border-top: 0.4px solid #86D1E3;
+    padding: 80px;
+    background-color: #083d4b;
+}
+
+#section5 .container {
+    max-width: 98rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.game-play {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.game-play h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    width: 31rem;
+}
+
+.game-play button {
+    width: 10rem;
+    height: 5rem;
+    margin: 20px;
+}
+
+.game-play p {
+    text-align: center;
+    font-size: 1.5rem;
+    width: 31rem;
+    display: none;
+}
+
+#img-btn-play {
+    position: relative;
+    bottom: 4px;
+    right: 10px;
 }
 
 /* Footer */
