@@ -11,7 +11,6 @@ html, body {
     scroll-behavior: smooth;
     font-family: 'Sarala', sans-serif;
     font-size: 62.5%;
-    background-color: #1B515E;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 }
@@ -21,11 +20,9 @@ html, body {
 header {
     position: absolute;
     width: 100%;
-    height: 4.8rem;
+    height: 6.8rem;
     display: flex;
     justify-content: center;
-    background-color: #083d4b;
-    border-bottom: 1px solid #86D1E3;
 }
 
 .container {
@@ -49,33 +46,33 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #fff;
+    color: #07333f;
     font-size: 1.4rem;
+    position: relative;
 }
 
-header nav ul li:hover {
-    background-color: #07333f;
+header nav ul li a:hover {
+    top: -3px;
 }
 
 /* Conteudo */
 
 .intro {
-    min-height: 100vh;
+    min-height: 55vh;
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 15rem;
 }
 
 .info {
-    width: 100%;
-    margin-top: 2rem;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
+
 }
 
 .text-intro {
@@ -86,14 +83,14 @@ header nav ul li:hover {
 
 .ola {
     font-size: 2rem;
-    color: #fff;
+    color: #000;
 }
 
 .name {
     font-family: 'Righteous', cursive;
     font-weight: 400;
     font-size: 5rem;
-    color: #86D1E3;
+    color: #067974;
     opacity: 0;
     animation: showName 1ms 1s forwards;
 }
@@ -117,7 +114,7 @@ header nav ul li:hover {
 
 .office {
     font-size: 1.5rem;
-    color: #fff;
+    color: #000;
 }
 
 .socials-btn a button:hover {
@@ -149,9 +146,7 @@ header nav ul li:hover {
 /* Primeira Seção */
 
 #section1 {
-    border-top: 0.4px solid #86D1E3;
-    background-color: #083d4b;
-    padding: 80px;
+    padding: 40px;
 }
 
 #section1 .container {
@@ -165,7 +160,7 @@ header nav ul li:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    text-align: left;
     gap: 20px;
     font-size: 1.6rem;
 }
@@ -177,12 +172,12 @@ header nav ul li:hover {
 
 .title {
     font-weight: 700;
-    color: #86D1E3;
+    color: #067974;
 }
 
 .description {
     font-weight: 400;
-    color: #fff;
+    color: #000;
     width: 600px;
 }
 
@@ -192,8 +187,8 @@ header nav ul li:hover {
     width: 100px;
     font-size: 1.5rem;
     font-weight: 700;
-    background-color: #86D1E3;
-    color: #1B515E;
+    background-color: #067974;
+    color: #fff;
     border: none;
     border-radius: 2px 2px 5px;
     box-shadow: 2px 2px 5px black;
@@ -205,15 +200,15 @@ button:hover {
 }
 
 #section1 img {
-    border: 1px outset #86D1E3;
+    border-radius: 5px;
     box-shadow: 12px 12px 0px rgb(45, 105, 102);
 }
 
 
 /* Segunda Seção */
 
+
 #section2 {
-    border-top: 0.4px solid #86D1E3;
     padding: 80px;
 }
 
@@ -222,7 +217,10 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+}
+
+#section2 .container .text {
+    border-bottom: .4px solid #07333f;
 }
 
 .skills {
@@ -243,30 +241,37 @@ button:hover {
     align-items: center;
     gap: 25px;
     border-radius: 20px;
-    background-color: #083d4b;
-    box-shadow: 2px 2px 5px black;
+    background-color: #fff;
+
 }
 
 .skills-card:hover {
     top: -10px;
+    box-shadow: 2px 2px 2px 2px gray;
+}
+
+.skills-card:hover img {
+    filter: grayscale(0);
 }
 
 .skills-card p {
     font-weight: 400;
     font-size: 1.6rem;
-    color: #fff;
+    color: #083d4b;
     width: 240px;
     text-align: center;
-    border-top: 0.4px solid #86D1E3;
+    border-top: 0.4px solid #000;
     padding-top: 10px;
+}
+
+.skills-card img {
+    filter: grayscale(1);
 }
 
 /* Terceira Seção */
 
 #section3 {
-    border-top: .4px solid #86D1E3;
-    background-color: #083d4b;
-    padding: 80px;
+    padding: 60px;
 }
 
 #section3 .container {
@@ -274,7 +279,10 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+}
+
+#section3 .container .text {
+    border-bottom: .4px solid #07333f;
 }
 
 .institute {
@@ -378,7 +386,6 @@ button:hover {
 /* Quarta Seção */
 
 #section4 {
-    border-top: .4px solid #86D1E3;
     padding: 80px;
 }
 
@@ -386,6 +393,11 @@ button:hover {
     max-width: 98rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+#section4 .container .text {
+    border-bottom: .4px solid #07333f;
 }
 
 .project-slider {
@@ -570,9 +582,7 @@ button:hover {
 /* Quinta Seção */
 
 #section5 {
-    border-top: 0.4px solid #86D1E3;
     padding: 80px;
-    background-color: #083d4b;
 }
 
 #section5 .container {
@@ -581,6 +591,7 @@ button:hover {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+
 }
 
 .game-play {
@@ -592,9 +603,8 @@ button:hover {
 }
 
 .game-play h1 {
-    text-align: center;
-    font-size: 1.5rem;
-    width: 31rem;
+    margin-bottom: 8rem;
+    border-bottom: .4px solid #07333f;
 }
 
 .game-play button {

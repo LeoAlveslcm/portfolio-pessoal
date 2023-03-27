@@ -74,7 +74,7 @@ const keys = document.querySelector("#keys");
 startButton.addEventListener("click", function() {
     if (game.style.display === "flex") {
         game.style.display = "none";
-        textIntro.style.display = "flex";
+        //textIntro.style.display = "flex";
         titleGame.style.display = "flex";
         ninjaGifGame.style.display = "flex";
         imageButtonPlay.src = "jogo/botao-play.png";
@@ -86,7 +86,7 @@ startButton.addEventListener("click", function() {
 
     } else {
         game.style.display = "flex";
-        textIntro.style.display = "none";
+        //textIntro.style.display = "none";
         titleGame.style.display = "none";
         ninjaGifGame.style.display = "none"
         imageButtonPlay.src = "jogo/botao-close.png";
