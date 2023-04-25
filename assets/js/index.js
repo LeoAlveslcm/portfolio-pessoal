@@ -57,7 +57,6 @@ const startButton = document.querySelector("#btn-start");
 const imageButtonPlay = document.querySelector("#img-btn-play");
 const playButton = document.querySelector("#btn-jogar");
 const textIntro = document.querySelector(".text-intro");
-const titleGame = document.querySelector("#title-game");
 const ninjaGifGame = document.querySelector("#ninja-gif-game");
 
 const ninjaRun = document.querySelector("#ninja-run");
@@ -75,7 +74,6 @@ startButton.addEventListener("click", function() {
     if (game.style.display === "flex") {
         game.style.display = "none";
         //textIntro.style.display = "flex";
-        titleGame.style.display = "flex";
         ninjaGifGame.style.display = "flex";
         imageButtonPlay.src = "jogo/botao-play.png";
 
@@ -87,7 +85,6 @@ startButton.addEventListener("click", function() {
     } else {
         game.style.display = "flex";
         //textIntro.style.display = "none";
-        titleGame.style.display = "none";
         ninjaGifGame.style.display = "none"
         imageButtonPlay.src = "jogo/botao-close.png";
 

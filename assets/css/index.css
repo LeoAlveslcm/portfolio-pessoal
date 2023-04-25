@@ -67,14 +67,6 @@ header nav ul li a:hover {
     gap: 15rem;
 }
 
-.info {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: center;
-
-}
-
 .text-intro {
     display: flex;
     flex-direction: column;
@@ -529,7 +521,7 @@ button:hover {
     align-items: center;
     gap: 25px;
     border-radius: 20px;
-    background-color: #083d4b;
+    background-color: #067974;
     box-shadow: 2px 2px 5px black;
 }
 
@@ -591,7 +583,11 @@ button:hover {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    gap: 80px;
+}
 
+#section5 .container .text {
+    border-bottom: .4px solid #07333f;
 }
 
 .game-play {
@@ -600,11 +596,6 @@ button:hover {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-}
-
-.game-play h1 {
-    margin-bottom: 8rem;
-    border-bottom: .4px solid #07333f;
 }
 
 .game-play button {
@@ -676,11 +667,6 @@ footer > p {
 }
 
 @media screen and (max-width: 1080px) {
-    .info {
-        flex-direction: column-reverse;
-        gap: 6rem;
-    }
-
     #btn-start, #img-btn-play {
         display: none;
     }
@@ -691,6 +677,14 @@ footer > p {
 }
 
 @media screen and (max-width: 1000px) {
+    .info .text-intro {
+        align-items: center;
+    }
+    
+    .intro img {
+        display: none;
+    }
+
     #section1 .container {
         flex-direction: column;
     }
@@ -702,6 +696,10 @@ footer > p {
 }
 
 @media screen and (max-width: 870px) {
+    .title {
+        text-align: center;
+    }
+
     .project-slider {
         width: 600px;
         height: 250px;
@@ -759,9 +757,9 @@ footer > p {
         width: 500px;
         margin-top: 170px;
     }
-}
 
-@media screen and (max-width: 600px) {
+    /* Menu Dispositivos Moveis */
+
     nav {
         display: none;
     }
@@ -769,7 +767,7 @@ footer > p {
     /* Menu Hamburguer */
 
     .one, .two, .three {
-        background-color: #fff;
+        background-color: #07333f;
         height: 5px;
         width: 100%;
         margin: 6px auto;
@@ -790,7 +788,7 @@ footer > p {
         left: 0;
         width: 100vW;
         height: 100vh;
-        background-color: #083d4b;
+        background-color: #fff;
         z-index: 10;
         display: flex;
         justify-content: center;
@@ -803,8 +801,8 @@ footer > p {
 
     .menu-section.on .menu-toggle {
         position: absolute;
-        right: 25px;
-        top: 5px;
+        right: 50px;
+        top: 15px;
     }
 
     .menu-section.on .menu-toggle .one {
@@ -830,7 +828,7 @@ footer > p {
         line-height: 4rem;
         display: block;
     }
-}
+}   
 
 @media screen and (max-width: 450px) {
     html, body {
